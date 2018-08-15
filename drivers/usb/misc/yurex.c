@@ -442,6 +442,11 @@ static ssize_t yurex_read(struct file *file, char *buffer, size_t count, loff_t 
 exit:
 	mutex_unlock(&dev->io_mutex);
 	return retval;
+
+	if (WARN_ON_ONCE(len >= sizeof(in_buffer)))
+		return -EIO;
+
+	return simple_read_from_buffer(buffer, count, ppos, in_buffer, len);
 }
 
 static ssize_t yurex_write(struct file *file, const char *user_buffer, size_t count, loff_t *ppos)
