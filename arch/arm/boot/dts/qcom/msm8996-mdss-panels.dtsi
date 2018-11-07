@@ -34,6 +34,7 @@
 #include "dsi-panel-toshiba-720p-video.dtsi"
 #include "dsi-panel-sharp-dsc-4k-cmd.dtsi"
 #include "dsi-panel-jdi-1080p-video.dtsi"
+#include "dsi-panel-zte-samsung-s6e3ha3-5p5-wqhd-dualmipi-cmd.dtsi"
 
 &soc {
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
