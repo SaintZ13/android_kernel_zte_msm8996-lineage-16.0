@@ -46,6 +46,8 @@ Module.symvers
 /vmlinuz
 /System.map
 /Module.markers
+/build
+build.sh
 
 #
 # Debian directory (make deb-pkg)
@@ -97,5 +99,23 @@ x509.genkey
 # Kconfig presets
 all.config
 
-# fetched Android config fragments
-android/configs/android-*.cfg
+# Leave out building folders
+build/
+out/
+prebuilts/
+build.sh
+changelog.sh
+
+# Linux Scripts
+/bin
+/os
+/snippets
+LICENSE
+README.md
+als
+build-clang
+build-kernel
+common
+flash-kernel
+merge-stable
+pi-kernel
